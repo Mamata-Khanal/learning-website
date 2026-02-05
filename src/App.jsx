@@ -1,17 +1,18 @@
-import Navbar from "./components/navbar";
-import Hero from "./components/hero";
-import Contact from "./components/contact";
-import Projects from "./components/projects";
-import Skills from "./components/skills";
-
-
+import Navbar from "./components/navbar/navbar";
+import Hero from "./components/navbar/hero";
+import About from "./components/about/about";
+import Contact from "./components/contact/contact";
+import Projects from "./components/projects/projects";
+import Skills from "./components/skills/skills";
+import "../src/styles/global.css";
 
 
 function App() {
   return (
     <div className="font-sans">
-      <Navbar />
-      <Hero />
+      <Navbar/>
+      <Hero/>
+      <About/>
       <Projects />
       <Skills />
       <Contact />

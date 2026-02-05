@@ -1,0 +1,152 @@
+/* src/styles/hero.css */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding-top: 80px;
+  width: 100%;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+/* Title Styles */
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.name-highlight {
+  color: #2563eb;
+  position: relative;
+  display: inline-block;
+}
+
+.name-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #dbeafe;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+/* Subtitle */
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* Description */
+.hero-description {
+  font-size: 1.125rem;
+  color: #4b5563;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  max-width: 700px;
+}
+
+/* Button Container */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  letter-spacing: 0.025em;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1);
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #2563eb;
+  border: 2px solid #dbeafe;
+}
+
+.btn-secondary:hover {
+  background-color: #eff6ff;
+  border-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+  
+  .hero-section {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-description {
+    font-size: 0.95rem;
+  }
+}

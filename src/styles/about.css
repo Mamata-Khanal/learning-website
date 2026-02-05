@@ -1,0 +1,203 @@
+/* src/styles/about.css */
+.about-section {
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Header */
+.section-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: #2563eb;
+  border-radius: 2px;
+}
+
+/* Description */
+.about-description {
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.description-text {
+  font-size: 1.125rem;
+  color: #4b5563;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* Divider Line */
+.divider-line {
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 3rem auto;
+  max-width: 800px;
+}
+
+/* Two Column Grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+/* Columns */
+.about-column {
+  padding: 0 1rem;
+}
+
+/* Subheaders */
+.section-subheader {
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.underline {
+  width: 40px;
+  height: 3px;
+  background-color: #10b981;
+  border-radius: 1.5px;
+}
+
+/* Education & Experience Items */
+.education-item,
+.experience-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  border-left: 4px solid #2563eb;
+}
+
+.item-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.item-subtitle {
+  font-size: 0.95rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Tags for Interests and Hobbies */
+.interests-list,
+.hobbies-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.interest-tag,
+.hobby-tag {
+  padding: 0.5rem 1rem;
+  background-color: #eff6ff;
+  color: #2563eb;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.interest-tag:hover,
+.hobby-tag:hover {
+  background-color: #dbeafe;
+  transform: translateY(-2px);
+}
+
+.hobby-tag {
+  background-color: #f0fdf4;
+  color: #10b981;
+}
+
+.hobby-tag:hover {
+  background-color: #dcfce7;
+}
+
+/* Utility Classes */
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .about-section {
+    padding: 60px 0;
+  }
+  
+  .description-text {
+    font-size: 1rem;
+  }
+  
+  .education-item,
+  .experience-item {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .interests-list,
+  .hobbies-list {
+    justify-content: center;
+  }
+}

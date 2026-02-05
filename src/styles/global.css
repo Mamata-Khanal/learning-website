@@ -1,0 +1,156 @@
+/* src/styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #1f2937;
+  line-height: 1.6;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-padding {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+}
+
+/* Color Variables */
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --accent: #10b981;
+  --text-dark: #111827;
+  --text-gray: #6b7280;
+  --border-light: #e5e7eb;
+  --white: #ffffff;
+}
+
+/* Utility Classes */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.items-center { align-items: center; }
+.hidden { display: none; }
+.fixed { position: fixed; }
+.w-full { width: 100%; }
+.z-50 { z-index: 50; }
+
+.space-x-8 > * + * {
+  margin-left: 2rem;
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+.border-b {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.border-t {
+  border-top: 1px solid var(--border-light);
+}
+
+.text-primary { color: var(--primary); }
+.text-accent { color: var(--accent); }
+.text-gray-600 { color: var(--text-gray); }
+.text-gray-900 { color: var(--text-dark); }
+.bg-white { background-color: var(--white); }
+
+/* For md breakpoint */
+@media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
+  
+  .md\:hidden {
+    display: none;
+  }
+}
+
+/* Text sizes */
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
+.rounded {
+  border-radius: 0.375rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+/* Last child utility */
+.last\:border-b-0:last-child {
+  border-bottom: 0;
+}
