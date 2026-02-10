@@ -1,8 +1,9 @@
-// src/components/herojxs/Hero.js
+
 import "../../styles/hero.css";
 
+
 const Hero = () => {
-  // Handle button clicks for smooth scrolling
+
   const handleViewWork = (e) => {
     e.preventDefault();
     const element = document.querySelector("#projects");
@@ -59,6 +60,17 @@ const Hero = () => {
               Contact Me
             </button>
           </div>
+        </div>
+
+        <div className="Photo">
+          <img
+            src="/profile.jpeg"
+            alt="Profile"
+            className="hero-photo"
+          />
+          <p style={{
+            textAlign:'center'
+          }}>Manager</p>
         </div>
       </div>
     </section>

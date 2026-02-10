@@ -98,6 +98,9 @@ const Contact = () => {
             </button>
           </form>
 
+
+          
+
           {/* Alternative Contact Info */}
           <div className="contact-info">
             <p className="contact-alt">

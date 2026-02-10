@@ -2,17 +2,22 @@
 .about-section {
   padding: 100px 0;
   background-color: #ffffff;
+  margin-left: 10%;
+  width: 90%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .about-content {
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 /* Section Header */
 .section-header {
-  margin-bottom: 3rem;
-  text-align: center;
+  margin-bottom: 4rem;
+  text-align: left;
 }
 
 .section-title {
@@ -28,8 +33,8 @@
   content: '';
   position: absolute;
   bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  transform: translateX(0);
   width: 60px;
   height: 4px;
   background-color: #2563eb;
@@ -38,11 +43,9 @@
 
 /* Description */
 .about-description {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  text-align: left;
 }
 
 .description-text {
@@ -56,41 +59,40 @@
 .divider-line {
   height: 1px;
   background-color: #e5e7eb;
-  margin: 3rem auto;
-  max-width: 800px;
+  margin: 4rem auto;
+  max-width: 1000px;
 }
 
 /* Two Column Grid */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: 4rem;
   max-width: 1000px;
-  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
   .about-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 6rem;
   }
 }
 
 /* Columns */
 .about-column {
-  padding: 0 1rem;
+  padding: 0;
 }
 
 /* Subheaders */
 .section-subheader {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .subtitle {
   font-size: 1.5rem;
   font-weight: 600;
   color: #111827;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .underline {
@@ -104,23 +106,44 @@
 .education-item,
 .experience-item {
   margin-bottom: 2rem;
-  padding: 1.5rem;
-  background-color: #f9fafb;
-  border-radius: 8px;
+  padding: 1.75rem;
+  background-color: #ffffff;
+  border-radius: 12px;
   border-left: 4px solid #2563eb;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.education-item:hover,
+.experience-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: #2563eb;
 }
 
 .item-title {
   font-size: 1.125rem;
   font-weight: 600;
   color: #111827;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .item-subtitle {
   font-size: 0.95rem;
   color: #6b7280;
   font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.item-duration {
+  font-size: 0.875rem;
+  color: #2563eb;
+  font-weight: 500;
+  background-color: #eff6ff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  display: inline-block;
 }
 
 /* Tags for Interests and Hobbies */
@@ -134,28 +157,66 @@
 
 .interest-tag,
 .hobby-tag {
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.25rem;
   background-color: #eff6ff;
   color: #2563eb;
-  border-radius: 50px;
+  border-radius: 8px;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.3s ease;
+  border: 1px solid #dbeafe;
 }
 
 .interest-tag:hover,
 .hobby-tag:hover {
-  background-color: #dbeafe;
+  background-color: #2563eb;
+  color: white;
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  border-color: #2563eb;
 }
 
 .hobby-tag {
   background-color: #f0fdf4;
   color: #10b981;
+  border-color: #a7f3d0;
 }
 
 .hobby-tag:hover {
-  background-color: #dcfce7;
+  background-color: #10b981;
+  color: white;
+  border-color: #10b981;
+}
+
+/* Skills Section */
+.skills-container {
+  margin-top: 2rem;
+}
+
+.skill-item {
+  margin-bottom: 1.5rem;
+}
+
+.skill-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.skill-bar {
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-level {
+  height: 100%;
+  background-color: #2563eb;
+  border-radius: 4px;
+  width: 0;
+  transition: width 1.5s ease-in-out;
 }
 
 /* Utility Classes */
@@ -168,13 +229,42 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .about-section {
+    margin-left: 8%;
+    width: 92%;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-section {
+    margin-left: 5%;
+    width: 95%;
+  }
+}
+
 @media (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
+  .about-section {
+    margin-left: 0;
+    width: 100%;
+    padding: 80px 2rem;
   }
   
-  .about-section {
-    padding: 60px 0;
+  .section-header {
+    text-align: center;
+  }
+  
+  .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .about-description {
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2rem;
   }
   
   .description-text {
@@ -185,9 +275,17 @@
   .experience-item {
     padding: 1.25rem;
   }
+  
+  .about-grid {
+    gap: 3rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .about-section {
+    padding: 60px 1.5rem;
+  }
+  
   .section-title {
     font-size: 1.75rem;
   }
@@ -199,5 +297,14 @@
   .interests-list,
   .hobbies-list {
     justify-content: center;
+  }
+  
+  .interest-tag,
+  .hobby-tag {
+    padding: 0.5rem 1rem;
+  }
+  
+  .about-grid {
+    gap: 2rem;
   }
 }
