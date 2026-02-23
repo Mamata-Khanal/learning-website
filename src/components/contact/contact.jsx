@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import "../../styles/contact.css";
 
 const Contact = () => {
@@ -109,6 +110,18 @@ const Contact = () => {
                 mamata@example.com
               </a>
             </p>
+            
+            <div className="social-links">
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon facebook" aria-label="Facebook">
+                <FaFacebook />
+              </a>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon instagram" aria-label="Instagram">
+                <FaInstagram />
+              </a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon linkedin" aria-label="LinkedIn">
+                <FaLinkedin />
+              </a>
+            </div>
           </div>
 
           {/* Additional Info Section */}

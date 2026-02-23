@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 import "../../styles/global.css";
 
 const Navbar = () => {
@@ -16,6 +17,13 @@ const Navbar = () => {
     <nav className="fixed w-full bg-white z-50 border-b">
       <div className="container section-padding flex justify-between items-center py-4">
 
+        {/* Logo */}
+        <div className="text-xl font-bold text-gray-900">
+          <a href="#home" className="hover:text-primary transition-all">
+            Mamata<span className="text-primary">.</span>
+          </a>
+        </div>
+
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
@@ -29,7 +37,18 @@ const Navbar = () => {
             </a>
           ))}
         </div>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden flex items-center">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-gray-600 hover:text-primary focus:outline-none"
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </button>
         </div>
+      </div>
         
       {/* Mobile Menu */}
       {isOpen && (

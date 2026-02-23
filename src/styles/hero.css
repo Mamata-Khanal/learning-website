@@ -6,10 +6,10 @@
   background-color: #ffffff;
   position: relative;
   margin-left: 10%;
-  width: 90%;
+  width: 100%;
 }
 
-.container {
+.hero-container {
   width: 100%;
   max-width: 1200px;
   display: flex;
@@ -37,6 +37,7 @@
   color: #111827;
   line-height: 1.1;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .name-highlight {
@@ -63,6 +64,7 @@
   color: #6b7280;
   margin-bottom: 1rem;
   font-weight: 500;
+  text-align: center;
 }
 
 /* Description */
@@ -166,7 +168,7 @@
     width: 92%;
   }
   
-  .container {
+  .hero-container {
     max-width: 1000px;
     padding: 0 1.5rem;
   }
@@ -183,7 +185,7 @@
     width: 95%;
   }
   
-  .container {
+  .hero-container {
     flex-direction: column;
     text-align: center;
     gap: 3rem;

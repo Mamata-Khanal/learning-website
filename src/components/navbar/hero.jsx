@@ -36,7 +36,7 @@ const Hero = () => {
 
   return (
     <section id="home" className="hero-section">
-      <div className="container section-padding">
+      <div className="hero-container section-padding">
         <div className="hero-content">
           <h1 className="hero-title">
             Hi, I'm <span className="name-highlight">Mamata Khanal</span>.
@@ -64,9 +64,9 @@ const Hero = () => {
 
         <div className="Photo">
           <img
-            src="/profile.jpeg"
-            alt="Profile"
-            className="hero-photo"
+            // src="/profile.jpeg"
+            // alt="Profile"
+            // className="hero-photo"
           />
           <p style={{
             textAlign:'center'
